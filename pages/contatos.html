@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emerald News</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <!-- <header>: Cabeçalho principal do site -->
+    <header>
+        <div class="brand">
+            <img id="article" src="../img/Emerald_JE3_BE3.webp" alt="logo da emerald news" title="Clique para tocar/pausar o áudio">
+            <h1>Emerald News</h1>
+        </div>
+        
+        <!-- <nav>: Bloco de links de navegação global -->
+        <nav>
+            <a href="../indexmeu.html">Home</a> | 
+            <a href="../pages/sobre.html">Sobre</a> | 
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <!-- <main>: Conteúdo principal e exclusivo desta página -->
+    <main>
+
+        <!-- <section>: Agrupa conteúdos relacionados ao mesmo tema (Notícias) -->
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Entre em contato conosco através dos canais abaixo:</p>
+            <ul>
+                <li>Email: emeraldnews@gmail.com</li>
+                <li>Telefone: (19) 5934-1678</li>
+                <li>Endereço: Rua da Notch, 255 - ginitre city</li>
+            </ul>
+            <p>Redes Sociais:</p>
+            <ul>
+                <li>youtube: emerald news</li>
+                <li>facebook: EmeraldNewsOfficial</li>
+                <li>instagram: emerald news</li>
+            </ul>
+        </section>
+
+        <!-- <section>: Agrupa conteúdos relacionados ao mesmo tema (Notícias) -->
+
+        <audio id="player" preload="auto" loop>
+            <source src="../img/1-18. Sweden.mp3" type="audio/mpeg">
+            Seu navegador não suporta áudio.
+        </audio>
+
+            <!-- <article>: Um conteúdo completo e independente (um post, uma notícia) -->
+            <article>
+                <header>
+                       <section id="contato"></section>
+                    <!-- <time>: Define uma data ou hora legível por máquinas -->
+                    <h3>Aviso importante</h3>
+                    <p>Publicado em: <time datetime="2017-06-15">15 de Junho de 2017</time></p>
+                </header>
+
+                <p>Se você sabe sobre o assunto, por favor nos envie suas contribuições, qualquer informação será bem-vinda.</p>
+                <!-- <mark>: Destaca/grifa um texto que tem relevância no momento -->
+
+                <!-- <figure>: Encapsula um conteúdo ilustrativo (imagem, gráfico, código) -->
+                <figure>
+                    <img src="../img/ca4a763763eafda9f67fac8b244ebe33.jpg" alt="aviso importante">
+                    <!-- <figcaption>: A legenda do conteúdo que está dentro da <figure> -->
+                    <figcaption>Figura 1: Aviso importante</figcaption>
+                </figure>
+            </article>
+    </main>
+
+    <!-- <footer>: Rodapé com informações de copyright, autor ou contato -->
+    <footer>
+        <p>&copy; 2026 Emerald News. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        const audioPlayer = document.getElementById('player');
+        const playImage = document.getElementById('article');
+
+        if (audioPlayer && playImage) {
+            playImage.addEventListener('click', () => {
+                if (audioPlayer.paused) {
+                    audioPlayer.play();
+                } else {
+                    audioPlayer.pause();
+                }
+            });
+        }
+    </script>
+</body>
+</html>

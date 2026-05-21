@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emerald News</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <!-- <header>: Cabeçalho principal do site -->
+    <header>
+        <div class="brand">
+            <img id="article" src="../img/Emerald_JE3_BE3.webp" alt="logo da emerald news" title="Clique para tocar/pausar o áudio">
+            <h1>Emerald News</h1>
+        </div>
+        
+        <!-- <nav>: Bloco de links de navegação global -->
+        <nav>
+            <a href="../indexmeu.html">Home</a> | 
+            <a href="#sobre">Sobre</a> | 
+            <a href="../pages/contatos.html">Contato</a>
+        </nav>
+    </header>
+
+    <!-- <main>: Conteúdo principal e exclusivo desta página -->
+    <main>
+
+        <!-- <section>: Agrupa conteúdos relacionados ao mesmo tema (Notícias) -->
+        <section id="sobre">
+            <h2>Sobre Nós</h2>
+            <p>Bem-vindo à Emerald News! Somos um time de jornalistas dedicados a trazer as últimas notícias do mundo de Minecraft.</p>
+        </section>
+
+        <!-- <section>: Agrupa conteúdos relacionados ao mesmo tema (Notícias) -->
+
+        <audio id="player" preload="auto" loop>
+            <source src="../img/1-18. Sweden.mp3" type="audio/mpeg">
+            Seu navegador não suporta áudio.
+        </audio>
+
+            <!-- <article>: Um conteúdo completo e independente (um post, uma notícia) -->
+            <article>
+                <header>
+                       <section id="herobrine"></section>
+                    <!-- <time>: Define uma data ou hora legível por máquinas -->
+                    <h3>O Primeiro Furo de Reportagem</h3>
+                    <p>Publicado em: <time datetime="2017-06-15">15 de Junho de 2017</time></p>
+                </header>
+
+                <p>Um jovem aldeão desempregado, que costumava trabalhar na imprensa de cana-de-açúcar, percebeu que o pânico crescia porque <mark>ninguém sabia o que era real ou mito</mark>. Munido de papel, bolsas de tinta de lula e uma bancada de cartografia, ele passou noites acordado entrevistando varias testemunhas viam coisas acontecendo. Ele grampeou as folhas e distribuiu os primeiros panfletos na taverna da vila.</p>
+                <!-- <mark>: Destaca/grifa um texto que tem relevância no momento -->
+
+                <!-- <figure>: Encapsula um conteúdo ilustrativo (imagem, gráfico, código) -->
+                <figure>
+                    <img src="../img/hq720.jpg" alt="primeiro furo de reportagem da emerald news">
+                    <!-- <figcaption>: A legenda do conteúdo que está dentro da <figure> -->
+                    <figcaption>Figura 1:primeiro jornal da emerald news</figcaption>
+                </figure>
+
+                <p> O que começou como um panfleto informativo em ginitre city transformou-se na maior corporação de comunicação e logística do Overworld. O Emerald News deixou de ser apenas um jornal para virar um conglomerado industrial indispensável para a sobrevivência global.</p>
+                <!-- <mark>: Destaca/grifa um texto que tem relevância no momento -->
+
+                <!-- <figure>: Encapsula um conteúdo ilustrativo (imagem, gráfico, código) -->
+                <figure>
+                    <img src="../img/images.jpg" alt="emerald news em construção">
+                    <!-- <figcaption>: A legenda do conteúdo que está dentro da <figure> -->
+                    <figcaption>Figura 2: a grande expansão da emerald news</figcaption>
+                </figure>
+
+                <p> Atualmente, o Emerald News Media Group deixou de ser apenas uma empresa física para se transformar em uma infraestrutura quase estatal.</p>
+                <!-- <mark>: Destaca/grifa um texto que tem relevância no momento -->
+
+                <!-- <figure>: Encapsula um conteúdo ilustrativo (imagem, gráfico, código) -->
+                <figure>
+                    <img src="../img/ca4a763763eafda9f67fac8b244ebe33.jpg" alt="emerald news em construção">
+                    <!-- <figcaption>: A legenda do conteúdo que está dentro da <figure> -->
+                    <figcaption>Figura 3: a emerald news se torna o melhor jornal do Overworld</figcaption>
+                </figure>
+
+            </article>
+
+    </main>
+
+    <!-- <footer>: Rodapé com informações de copyright, autor ou contato -->
+    <footer>
+        <p>&copy; 2026 Emerald News. Todos os direitos reservados.</p>
+    </footer>
+
+        <script>
+        const audioPlayer = document.getElementById('player');
+        const playImage = document.getElementById('article');
+
+        if (audioPlayer && playImage) {
+            playImage.addEventListener('click', () => {
+                if (audioPlayer.paused) {
+                    audioPlayer.play();
+                } else {
+                    audioPlayer.pause();
+                }
+            });
+        }
+    </script>
+</body>
+</html>
